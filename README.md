@@ -26,10 +26,13 @@ the project running locally:
    This will also install `npm`, which is used to install yarn.
 2. Install yarn globally with `npm install --global yarn`.
 3. Clone this repository and change into the project directory.
-4. `cd web` and run `yarn` to install all dependencies.
+4. `cd web` and run `yarn install` to install all dependencies. This will
+   download Next.js, React and all other packages needed by the frontend.
 5. Create a `.env.local` file (see `web/README.md` for the variables).
 6. If you want to store results locally, start MongoDB with `docker-compose up -d`.
-7. For development run `yarn dev`. For production build and start with:
+7. For development run `yarn dev`. If you see a `next: command not found`
+   error, run `yarn install` again in the `web` directory to ensure that all
+   dependencies are installed. For production build and start with:
    ```
    yarn build
    yarn start
