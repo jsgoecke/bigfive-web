@@ -18,14 +18,18 @@ Each package has its own README with more detailed documentation.
 
 ## Deploying
 
-The website lives in the `web` folder. To run it locally or deploy it,
-follow these steps:
+The website lives in the `web` folder. If you are starting from a completely
+clean system without Node.js or yarn installed, these are the basic steps to get
+the project running locally:
 
-1. Install [Node.js](https://nodejs.org/) and [yarn](https://yarnpkg.com/).
-2. `cd web` and run `yarn` to install dependencies.
-3. Create a `.env.local` file (see `web/README.md` for the variables).
-4. If you want to store results locally, start MongoDB with `docker-compose up -d`.
-5. For development run `yarn dev`. For production build and start with:
+1. Install [Node.js](https://nodejs.org/) (the LTS version is recommended).
+   This will also install `npm`, which is used to install yarn.
+2. Install yarn globally with `npm install --global yarn`.
+3. Clone this repository and change into the project directory.
+4. `cd web` and run `yarn` to install all dependencies.
+5. Create a `.env.local` file (see `web/README.md` for the variables).
+6. If you want to store results locally, start MongoDB with `docker-compose up -d`.
+7. For development run `yarn dev`. For production build and start with:
    ```
    yarn build
    yarn start
