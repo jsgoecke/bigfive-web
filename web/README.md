@@ -40,8 +40,12 @@ DB_COLLECTION=results
 Run the setup script to install all dependencies
 
 ```
-yarn
+yarn install
 ```
+
+If you later get a `next: command not found` error when running `yarn dev`,
+dependencies might not be installed correctly. Run `yarn install` again inside
+this `web` directory.
 
 Start mongodb server
 
